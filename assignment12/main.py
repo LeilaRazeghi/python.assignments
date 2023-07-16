@@ -50,9 +50,8 @@ def add():
 
     new_media= Media(name, director, imdb_score, url, duration, casts, productionyear)
     MEDIA.append(new_media)
-    media.showInfo()
+    new_media.showInfo()
     
-
 def remove():
     name= input("enter film name: ")
     for media in MEDIA:
@@ -177,7 +176,7 @@ while True:
         name=input("enter media's name: ")
         for media in MEDIA:
             if media.name==name:
-                media.download()
+                media.downloads()
                 break
         else:
             print("media not found!")
